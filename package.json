@@ -1,0 +1,137 @@
+{
+  "name": "@chirag127/oriz-omnipost",
+  "version": "0.1.0",
+  "description": "RSS-driven cross-poster — fans each blog.oriz.in post out to every blogging platform with a public API. Adapter pattern, idempotent, short-link fallback.",
+  "license": "MIT",
+  "author": "Chirag Singhal",
+  "type": "module",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./adapter": {
+      "types": "./src/adapter.ts",
+      "import": "./src/adapter.ts",
+      "default": "./src/adapter.ts"
+    },
+    "./adapters/bluesky": {
+      "types": "./src/adapters/bluesky.ts",
+      "import": "./src/adapters/bluesky.ts",
+      "default": "./src/adapters/bluesky.ts"
+    },
+    "./adapters/buttondown": {
+      "types": "./src/adapters/buttondown.ts",
+      "import": "./src/adapters/buttondown.ts",
+      "default": "./src/adapters/buttondown.ts"
+    },
+    "./adapters/dev-to": {
+      "types": "./src/adapters/dev-to.ts",
+      "import": "./src/adapters/dev-to.ts",
+      "default": "./src/adapters/dev-to.ts"
+    },
+    "./adapters/hashnode": {
+      "types": "./src/adapters/hashnode.ts",
+      "import": "./src/adapters/hashnode.ts",
+      "default": "./src/adapters/hashnode.ts"
+    },
+    "./adapters/linkedin": {
+      "types": "./src/adapters/linkedin.ts",
+      "import": "./src/adapters/linkedin.ts",
+      "default": "./src/adapters/linkedin.ts"
+    },
+    "./adapters/medium": {
+      "types": "./src/adapters/medium.ts",
+      "import": "./src/adapters/medium.ts",
+      "default": "./src/adapters/medium.ts"
+    },
+    "./adapters/reddit": {
+      "types": "./src/adapters/reddit.ts",
+      "import": "./src/adapters/reddit.ts",
+      "default": "./src/adapters/reddit.ts"
+    },
+    "./adapters/short-link-fallback": {
+      "types": "./src/adapters/short-link-fallback.ts",
+      "import": "./src/adapters/short-link-fallback.ts",
+      "default": "./src/adapters/short-link-fallback.ts"
+    },
+    "./adapters/substack": {
+      "types": "./src/adapters/substack.ts",
+      "import": "./src/adapters/substack.ts",
+      "default": "./src/adapters/substack.ts"
+    },
+    "./adapters/telegraph": {
+      "types": "./src/adapters/telegraph.ts",
+      "import": "./src/adapters/telegraph.ts",
+      "default": "./src/adapters/telegraph.ts"
+    },
+    "./adapters/twitter-x": {
+      "types": "./src/adapters/twitter-x.ts",
+      "import": "./src/adapters/twitter-x.ts",
+      "default": "./src/adapters/twitter-x.ts"
+    },
+    "./adapters/wordpress-com": {
+      "types": "./src/adapters/wordpress-com.ts",
+      "import": "./src/adapters/wordpress-com.ts",
+      "default": "./src/adapters/wordpress-com.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@atproto/api": "latest",
+    "rehype-stringify": "latest",
+    "remark-parse": "latest",
+    "remark-rehype": "latest",
+    "rss-parser": "latest",
+    "unified": "latest"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.8",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.34.3",
+  "keywords": [
+    "rss",
+    "cross-post",
+    "blog",
+    "dev-to",
+    "bluesky",
+    "buttondown",
+    "telegraph",
+    "wordpress",
+    "reddit",
+    "oriz",
+    "omnipost"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chirag127/oriz-omnipost.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chirag127/oriz-omnipost/issues"
+  },
+  "homepage": "https://github.com/chirag127/oriz-omnipost#readme"
+}

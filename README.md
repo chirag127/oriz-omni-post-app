@@ -37,4 +37,4 @@ See [`./knowledge/`](./knowledge/) for app-specific decisions, runbooks, and ser
 
 ## License
 
-Source-available, all rights reserved. See master [`LICENSE`](../../../../LICENSE) — same terms across the family.
+MIT License. See master [`LICENSE`](../../../../LICENSE) — same terms across the family.

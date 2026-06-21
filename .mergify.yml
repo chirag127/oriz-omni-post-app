@@ -1,0 +1,24 @@
+queue_rules:
+  - name: default
+    queue_conditions:
+      - check-success=check
+    merge_conditions:
+      - check-success=check
+    merge_method: squash
+
+pull_request_rules:
+  - name: automatic merge on approval
+    conditions:
+      - "#approved-reviews-by>=1"
+      - check-success=check
+      - -draft
+    actions:
+      queue: {}
+  - name: automatic merge for dependabot/renovate
+    conditions:
+      - or:
+        - author=dependabot[bot]
+        - author=renovate[bot]
+      - check-success=check
+    actions:
+      queue: {}

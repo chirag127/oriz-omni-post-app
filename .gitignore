@@ -5,3 +5,7 @@ dist/
 .env.local
 state.json
 .DS_Store
+
+# env (synced via sops + age)
+.env.*.local
+.sops-age-key.txt
